@@ -3,8 +3,8 @@ package question1;
 /**
  * Classe-test FahrenheitCelsiusTest.
  * 
- * @author (votre nom)
- * @version (un numéro de version ou une date)
+ * @author Jalal Hassane
+ * @version 16/3/2019
  * 
  *          Les classes-test sont documentées ici :
  *          http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
@@ -24,51 +24,88 @@ package question1;
  *          engagements, et suivi d'un appel à tearDown(), qui les détruit.
  */
 public class FahrenheitCelsiusTest extends junit.framework.TestCase {
-	// Définissez ici les variables d'instance nécessaires à vos engagements;
-	// Vous pouvez également les saisir automatiquement du présentoir
-	// à l'aide du menu contextuel "Présentoir --> Engagements".
-	// Notez cependant que ce dernier ne peut saisir les objets primitifs
-	// du présentoir (les objets sans constructeur, comme int, float, etc.).
+    // Définissez ici les variables d'instance nécessaires à vos engagements;
+    // Vous pouvez également les saisir automatiquement du présentoir
+    // à l'aide du menu contextuel "Présentoir --> Engagements".
+    // Notez cependant que ce dernier ne peut saisir les objets primitifs
+    // du présentoir (les objets sans constructeur, comme int, float, etc.).
 
-	/**
-	 * Constructeur de la classe-test FahrenheitCelsiusTest
-	 */
-	public FahrenheitCelsiusTest() {
-	}
+    private int fahrenheitTest1,fahrenheitTest2,fahrenheitTest3,fahrenheitTest4,fahrenheitTest5;
+    private int fahrenheitTest6,fahrenheitTest7,fahrenheitTest8,fahrenheitTest9,fahrenheitTest10;
+    /**
+     * Constructeur de la classe-test FahrenheitCelsiusTest
+     */
+    public FahrenheitCelsiusTest() {
+    }
 
-	/**
-	 * Met en place les engagements.
-	 * 
-	 * Méthode appelée avant chaque appel de méthode de test.
-	 */
-	protected void setUp() // throws java.lang.Exception
-	{
-		// Initialisez ici vos engagements
+    /**
+     * Met en place les engagements.
+     * 
+     * Méthode appelée avant chaque appel de méthode de test.
+     */
+    protected void setUp() // throws java.lang.Exception
+    {
+        fahrenheitTest1 = 14;
+        fahrenheitTest2 = 199;
+        fahrenheitTest3 = -47;
+        fahrenheitTest4 = -199;
+        fahrenheitTest5 = 10000;
+        fahrenheitTest6 = 33;
+        fahrenheitTest7 = 92;
+        fahrenheitTest8 = 1;
+        fahrenheitTest9 = 77;
+        fahrenheitTest10 = 100;
 
-	}
 
-	/**
-	 * Supprime les engagements
-	 * 
-	 * Méthode appelée après chaque appel de méthode de test.
-	 */
-	protected void tearDown() // throws java.lang.Exception
-	{
-		// Libérez ici les ressources engagées par setUp()
-	}
+    }
 
-	/**
-	 * Il ne vous reste plus qu'à définir une ou plusieurs méthodes de test. Ces
-	 * méthodes doivent vérifier les résultats attendus à l'aide d'assertions
-	 * assertTrue(<boolean>). Par convention, leurs noms devraient débuter par
-	 * "test". Vous pouvez ébaucher le corps grâce au menu contextuel
-	 * "Enregistrer une méthode de test".
-	 */
-	public void test_fahrenheitEnCelsius() {
-		assertEquals("    0 °F -> -17.7 °C ? ", -17.7, question1.FahrenheitCelsius.fahrenheitEnCelsius(0), 0.1);
-		assertEquals("  100 °F -> 37.7 °C ? ", 37.7, question1.FahrenheitCelsius.fahrenheitEnCelsius(100), 0.1);
-		assertEquals(" 2000 °F -> 1093.3 °C ?", 1093.3, question1.FahrenheitCelsius.fahrenheitEnCelsius(2000), 0.1);
-		assertEquals("   54 °F -> 12.2 °C ?", 12.2, question1.FahrenheitCelsius.fahrenheitEnCelsius(54), 0.1);
-	}
-	
+    /**
+     * Supprime les engagements
+     * 
+     * Méthode appelée après chaque appel de méthode de test.
+     */
+    protected void tearDown() // throws java.lang.Exception
+    {
+        fahrenheitTest1=0;
+        fahrenheitTest2=0;
+        fahrenheitTest3=0;
+        fahrenheitTest4=0;
+        fahrenheitTest5=0;
+        fahrenheitTest6=0;
+        fahrenheitTest7=0;
+        fahrenheitTest8=0;
+        fahrenheitTest9=0;
+        fahrenheitTest10=0;
+    }
+
+    /**
+     * Il ne vous reste plus qu'à définir une ou plusieurs méthodes de test. Ces
+     * méthodes doivent vérifier les résultats attendus à l'aide d'assertions
+     * assertTrue(<boolean>). Par convention, leurs noms devraient débuter par
+     * "test". Vous pouvez ébaucher le corps grâce au menu contextuel
+     * "Enregistrer une méthode de test".
+     */
+    public void test_fahrenheitEnCelcius1(){
+        assertTrue(question1.FahrenheitCelsius.fahrenheitEnCelsius(fahrenheitTest1) == -10.0);
+        assertTrue(question1.FahrenheitCelsius.fahrenheitEnCelsius(fahrenheitTest2) == 92.7);
+        assertTrue(question1.FahrenheitCelsius.fahrenheitEnCelsius(fahrenheitTest3) == -43.8);
+        assertTrue(question1.FahrenheitCelsius.fahrenheitEnCelsius(fahrenheitTest4) == -128.3);
+        assertTrue(question1.FahrenheitCelsius.fahrenheitEnCelsius(fahrenheitTest5) == 5537.7);
+
+    }
+    public void test_fahrenheitEnCelcius2(){
+        assertTrue(question1.FahrenheitCelsius.fahrenheitEnCelsius(fahrenheitTest5) == 0.5);
+        assertTrue(question1.FahrenheitCelsius.fahrenheitEnCelsius(fahrenheitTest6) == 33.3);
+        assertTrue(question1.FahrenheitCelsius.fahrenheitEnCelsius(fahrenheitTest7) == -17.2);
+        assertTrue(question1.FahrenheitCelsius.fahrenheitEnCelsius(fahrenheitTest8) == 25.0);
+        assertTrue(question1.FahrenheitCelsius.fahrenheitEnCelsius(fahrenheitTest9) == 37.7);
+
+    }
+    public void test_fahrenheitEnCelsius() {
+        assertEquals("    0 °F -> -17.7 °C ? ", -17.7, question1.FahrenheitCelsius.fahrenheitEnCelsius(0), 0.1);
+        assertEquals("  100 °F -> 37.7 °C ? ", 37.7, question1.FahrenheitCelsius.fahrenheitEnCelsius(100), 0.1);
+        assertEquals(" 2000 °F -> 1093.3 °C ?", 1093.3, question1.FahrenheitCelsius.fahrenheitEnCelsius(2000), 0.1);
+        assertEquals("   54 °F -> 12.2 °C ?", 12.2, question1.FahrenheitCelsius.fahrenheitEnCelsius(54), 0.1);
+    }
+    
 }
